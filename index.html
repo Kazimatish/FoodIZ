@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="FOODIZ - Fresh, fast and delicious burgers, pizzas, fried chicken, shawarma, fries, drinks and desserts in Islamabad."
+  >
+
+  <title>FOODIZ — Fresh. Fast. Delicious.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <!-- Website CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Toast Notifications -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container nav-container">
+
+      <a href="#home" class="logo" aria-label="FOODIZ Home">
+        <i class="fa-solid fa-burger"></i>
+        FOOD<span>IZ</span>
+      </a>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button
+          class="icon-btn"
+          id="search-trigger"
+          title="Search Menu"
+          aria-label="Search Menu"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button
+          class="icon-btn"
+          id="cart-btn"
+          aria-label="View Cart"
+        >
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <span class="badge">🔥 Hot & Fresh Everyday</span>
+
+          <h1>
+            Craving Something
+            <span class="highlight">Delicious?</span>
+          </h1>
+
+          <p>
+            Fresh food, bold flavors, delivered fast.
+            Enjoy our premium burgers, pizzas, crispy chicken,
+            wraps, fries, shakes and desserts.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#menu" class="btn btn-primary">
+              <i class="fa-solid fa-utensils"></i>
+              Order Now
+            </a>
+
+            <a href="#menu" class="btn btn-outline">
+              Explore Menu
+            </a>
+
+          </div>
+
+          <div class="hero-features">
+
+            <div class="feature-item">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Fast 30-Min Delivery</span>
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-leaf"></i>
+              <span>Fresh Ingredients</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-image-wrapper">
+
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+            alt="FOODIZ delicious burger"
+            class="hero-img"
+          >
+
+          <div class="hero-tag">
+
+            <div class="tag-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div>
+              <strong>4.9 / 5.0</strong>
+              <p>Customer Rating</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= OFFERS ================= -->
+    <section class="section offers-section">
+
+      <div class="container grid-2">
+
+        <div class="offer-card banner-1">
+
+          <span class="offer-subtitle">Weekend Deal</span>
+
+          <h3>Double Cheese Burger Fiesta</h3>
+
+          <p>
+            Enjoy delicious double beef burgers with
+            our special weekend deal.
+          </p>
+
+          <a href="#menu" class="btn btn-sm btn-light">
+            Order Now
+          </a>
+
+        </div>
+
+
+        <div class="offer-card banner-2">
+
+          <span class="offer-subtitle">Family Combo</span>
+
+          <h3>Crispy Chicken Bucket</h3>
+
+          <p>
+            8-piece crispy chicken with loaded fries
+            and a refreshing soft drink.
+          </p>
+
+          <a href="#menu" class="btn btn-sm btn-light">
+            Order Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+    <section id="menu" class="section menu-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Explore Our
+            <span>Menu</span>
+          </h2>
+
+          <p>
+            Freshly prepared fast food made for hungry food lovers.
+          </p>
+
+        </div>
+
+
+        <!-- SEARCH + SORT -->
+        <div class="menu-controls">
+
+          <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search burgers, pizza, fries..."
+              autocomplete="off"
+            >
+
+          </div>
+
+
+          <div class="sort-box">
+
+            <label for="sort-select">
+              <i class="fa-solid fa-sort"></i>
+              Sort:
+            </label>
+
+            <select id="sort-select">
+
+              <option value="default">
+                Default
+              </option>
+
+              <option value="low-high">
+                Price: Low to High
+              </option>
+
+              <option value="high-low">
+                Price: High to Low
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <!-- CATEGORY FILTERS -->
+        <div
+          class="category-filters"
+          id="category-filters"
+          aria-label="Food Categories"
+        >
+
+          <button
+            class="filter-btn active"
+            data-category="All"
+          >
+            All Items
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Burgers"
+          >
+            Burgers
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Pizza"
+          >
+            Pizza
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Shawarma"
+          >
+            Shawarma
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Fried Chicken"
+          >
+            Fried Chicken
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Fries"
+          >
+            Fries
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Wraps"
+          >
+            Wraps
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Sandwiches"
+          >
+            Sandwiches
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Fast Food"
+          >
+            Fast Food
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Pasta"
+          >
+            Pasta
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Drinks"
+          >
+            Drinks
+          </button>
+
+          <button
+            class="filter-btn"
+            data-category="Desserts"
+          >
+            Desserts
+          </button>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div
+          class="products-grid"
+          id="products-grid"
+        ></div>
+
+
+        <!-- NO PRODUCTS -->
+        <div
+          id="no-products"
+          class="no-products hidden"
+        >
+
+          <i class="fa-solid fa-face-sad-tear"></i>
+
+          <h3>No Products Found</h3>
+
+          <p>
+            Try another search or select a different category.
+          </p>
+
+          <button
+            id="clear-search"
+            class="btn btn-primary btn-sm"
+          >
+            Clear Search
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= REVIEWS ================= -->
+    <section class="section reviews-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            What Our
+            <span>Customers Say</span>
+          </h2>
+
+          <p>
+            Feedback from FOODIZ customers.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+          <div class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "The Zinger Burger and Loaded Fries are
+              absolutely delicious!"
+            </p>
+
+            <div class="user-info">
+
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                alt="Customer"
+              >
+
+              <div>
+                <h4>Ayesha Khan</h4>
+                <span>Customer</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "The pizza arrived hot and fresh.
+              Great taste and reasonable prices."
+            </p>
+
+            <div class="user-info">
+
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                alt="Customer"
+              >
+
+              <div>
+                <h4>Hamza Malik</h4>
+                <span>Customer</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Excellent flavor, affordable prices
+              and friendly service."
+            </p>
+
+            <div class="user-info">
+
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                alt="Customer"
+              >
+
+              <div>
+                <h4>Sania Ahmed</h4>
+                <span>Customer</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section about-section">
+
+      <div class="container grid-2">
+
+        <div class="about-img">
+
+          <img
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+            alt="FOODIZ restaurant"
+          >
+
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="badge">
+            About FOODIZ
+          </span>
+
+          <h2>
+            Driven by Passion,
+            <span>Fresh Taste</span>
+          </h2>
+
+          <p>
+            FOODIZ is a modern fast-food restaurant
+            focused on fresh, delicious and affordable meals.
+          </p>
+
+          <p>
+            We bring together families, students and
+            food lovers with bold flavors and fast service.
+          </p>
+
+
+          <div class="about-stats">
+
+            <div class="stat-box">
+              <h3>40+</h3>
+              <p>Menu Items</p>
+            </div>
+
+            <div class="stat-box">
+              <h3>30 Min</h3>
+              <p>Fast Delivery</p>
+            </div>
+
+            <div class="stat-box">
+              <h3>100%</h3>
+              <p>Fresh Taste</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Get in
+            <span>Touch</span>
+          </h2>
+
+          <p>
+            Questions, feedback or catering requests?
+            Contact FOODIZ.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <div class="info-card">
+
+              <i class="fa-solid fa-phone"></i>
+
+              <div>
+                <h4>Phone Number</h4>
+
+                <a href="tel:03488277200">
+                  03488277200
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <div>
+                <h4>Location</h4>
+                <p>
+                  Alipur Farash, Islamabad, Pakistan
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <div>
+                <h4>Email</h4>
+
+                <a href="mailto:kazimatish555@gmail.com">
+                  kazimatish555@gmail.com
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+              <i class="fa-solid fa-clock"></i>
+
+              <div>
+                <h4>Opening Hours</h4>
+
+                <p>
+                  Monday - Sunday
+                  <br>
+                  11:00 AM - 12:00 AM
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="map-placeholder">
+
+              <i class="fa-solid fa-map-location-dot"></i>
+
+              <h4>FOODIZ Location</h4>
+
+              <p>
+                Alipur Farash, Islamabad
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Alipur+Farash+Islamabad"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm mt-2"
+              >
+                Open Google Maps
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- CONTACT FORM -->
+          <form
+            id="contact-form"
+            class="contact-form"
+          >
+
+            <h3>
+              Send Us a Message
+            </h3>
+
+            <div class="form-group">
+
+              <label for="contact-name">
+                Your Name
+              </label>
+
+              <input
+                type="text"
+                id="contact-name"
+                placeholder="Enter your name"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="contact-email">
+                Your Email
+              </label>
+
+              <input
+                type="email"
+                id="contact-email"
+                placeholder="Enter your email"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="contact-message">
+                Message
+              </label>
+
+              <textarea
+                id="contact-message"
+                rows="5"
+                placeholder="Write your message..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary w-100"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+    <section class="cta-section">
+
+      <div class="container text-center">
+
+        <h2>
+          Ready to Satisfy Your Hunger?
+        </h2>
+
+        <p>
+          Order your favorite FOODIZ meal today.
+        </p>
+
+        <a
+          href="#menu"
+          class="btn btn-primary btn-lg"
+        >
+          Order Online Now
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= CART ================= -->
+
+  <div
+    class="cart-overlay"
+    id="cart-overlay"
+  ></div>
+
+
+  <aside
+    class="cart-sidebar"
+    id="cart-sidebar"
+    aria-label="Shopping Cart"
+  >
+
+    <div class="cart-header">
+
+      <h3>
+        <i class="fa-solid fa-basket-shopping"></i>
+        Your Cart
+      </h3>
+
+      <button
+        class="close-cart"
+        id="close-cart"
+        aria-label="Close Cart"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+    </div>
+
+
+    <div
+      class="cart-body"
+      id="cart-items-container"
+    ></div>
+
+
+    <div class="cart-footer">
+
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₨0</span>
+      </div>
+
+      <div class="summary-line">
+        <span>Delivery Fee</span>
+        <span id="cart-delivery">₨0</span>
+      </div>
+
+      <div class="summary-line total">
+        <span>Grand Total</span>
+        <span id="cart-total">₨0</span>
+      </div>
+
+      <button
+        class="btn btn-primary w-100"
+        id="proceed-checkout-btn"
+      >
+        Proceed to Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ================= CHECKOUT ================= -->
+
+  <div
+    class="checkout-modal"
+    id="checkout-modal"
+  >
+
+    <div class="modal-content">
+
+      <button
+        class="close-modal"
+        id="close-modal"
+        aria-label="Close Checkout"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+
+      <!-- CHECKOUT FORM -->
+      <div id="checkout-form-wrapper">
+
+        <h2>
+          <i class="fa-solid fa-shield-halved"></i>
+          Checkout
+        </h2>
+
+        <div class="checkout-grid">
+
+          <form id="checkout-form">
+
+            <h3>Delivery Details</h3>
+
+
+            <div class="form-group">
+
+              <label for="cust-name">
+                Full Name *
+              </label>
+
+              <input
+                type="text"
+                id="cust-name"
+                required
+                placeholder="e.g. Ali Ahmed"
+              >
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="cust-phone">
+                  Phone Number *
+                </label>
+
+                <input
+                  type="tel"
+                  id="cust-phone"
+                  required
+                  pattern="03[0-9]{9}"
+                  placeholder="03XXXXXXXXX"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="cust-email">
+                  Email *
+                </label>
+
+                <input
+                  type="email"
+                  id="cust-email"
+                  required
+                  placeholder="name@example.com"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="cust-address">
+                Delivery Address *
+              </label>
+
+              <input
+                type="text"
+                id="cust-address"
+                required
+                placeholder="House/Street/Sector"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="cust-city">
+                City *
+              </label>
+
+              <input
+                type="text"
+                id="cust-city"
+                value="Islamabad"
+                required
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="cust-notes">
+                Order Notes
+              </label>
+
+              <textarea
+                id="cust-notes"
+                rows="3"
+                placeholder="Extra ketchup, less spicy..."
+              ></textarea>
+
+            </div>
+
+
+            <h3>Payment Method</h3>
+
+            <div class="payment-options">
+
+              <label class="payment-card">
+
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="Cash on Delivery"
+                  checked
+                >
+
+                <span>
+                  <i class="fa-solid fa-money-bill-wave"></i>
+                  Cash on Delivery
+                </span>
+
+              </label>
+
+
+              <label class="payment-card">
+
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="Credit/Debit Card"
+                >
+
+                <span>
+                  <i class="fa-solid fa-credit-card"></i>
+                  Card
+                </span>
+
+              </label>
+
+
+              <label class="payment-card">
+
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="Easypaisa"
+                >
+
+                <span>
+                  <i class="fa-solid fa-wallet"></i>
+                  Easypaisa
+                </span>
+
+              </label>
+
+
+              <label class="payment-card">
+
+                <input
+                  type="radio"
+                  name="payment-method"
+                  value="JazzCash"
+                >
+
+                <span>
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  JazzCash
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary w-100 mt-2"
+            >
+              <i class="fa-solid fa-check"></i>
+              Place Order
+            </button>
+
+          </form>
+
+
+          <!-- ORDER SUMMARY -->
+          <div class="order-summary-box">
+
+            <h3>
+              Order Summary
+            </h3>
+
+            <div
+              id="checkout-summary-items"
+              class="summary-items"
+            ></div>
+
+            <div class="summary-totals">
+
+              <div class="summary-line">
+                <span>Subtotal</span>
+                <span id="checkout-subtotal">₨0</span>
+              </div>
+
+              <div class="summary-line">
+                <span>Delivery Fee</span>
+                <span id="checkout-delivery">₨0</span>
+              </div>
+
+              <div class="summary-line total">
+                <span>Grand Total</span>
+                <span id="checkout-total">₨0</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ORDER SUCCESS -->
+      <div
+        id="order-success-wrapper"
+        class="order-success hidden text-center"
+      >
+
+        <div class="success-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>
+          Order Placed Successfully!
+        </h2>
+
+        <p>
+          Thank you for ordering with
+          <strong>FOODIZ</strong>.
+        </p>
+
+
+        <div class="order-details-box">
+
+          <p>
+            <strong>Order ID:</strong>
+            <span id="conf-order-id">
+              #FDZ-0000
+            </span>
+          </p>
+
+          <p>
+            <strong>Customer:</strong>
+            <span id="conf-customer">
+              -
+            </span>
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            <span id="conf-phone">
+              -
+            </span>
+          </p>
+
+          <p>
+            <strong>Payment:</strong>
+            <span id="conf-payment">
+              Cash on Delivery
+            </span>
+          </p>
+
+          <p>
+            <strong>Total:</strong>
+            <span id="conf-total">
+              ₨0
+            </span>
+          </p>
+
+          <p>
+            <strong>Estimated Delivery:</strong>
+            30 - 40 minutes
+          </p>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary mt-2"
+          id="back-to-home-btn"
+        >
+          Continue Shopping
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="#home" class="logo">
+          <i class="fa-solid fa-burger"></i>
+          FOOD<span>IZ</span>
+        </a>
+
+        <p>
+          Fresh fast food with bold flavors,
+          affordable prices and fast delivery.
+        </p>
+
+        <div class="social-links">
+
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/923488277200" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="#" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Quick Links</h4>
+
+        <ul>
+
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Categories</h4>
+
+        <ul>
+
+          <li>
+            <a href="#menu">Burgers</a>
+          </li>
+
+          <li>
+            <a href="#menu">Pizza</a>
+          </li>
+
+          <li>
+            <a href="#menu">Fried Chicken</a>
+          </li>
+
+          <li>
+            <a href="#menu">Fries</a>
+          </li>
+
+          <li>
+            <a href="#menu">Drinks & Shakes</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-newsletter">
+
+        <h4>Newsletter</h4>
+
+        <p>
+          Subscribe for FOODIZ deals and offers.
+        </p>
+
+        <form id="newsletter-form">
+
+          <input
+            type="email"
+            placeholder="Your email"
+            required
+          >
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            aria-label="Subscribe"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom text-center">
+
+      <p>
+        &copy; 2026 FOODIZ.
+        All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
